@@ -1,9 +1,11 @@
+//file :main.c
+
 #include <cstdlib>
 #include <iostream>
 
 using namespace std;
 
-
+//*********************************
 class Fruit{
 public:   
    int no ;
@@ -16,7 +18,8 @@ public:
    void print() {   }
    virtual void process(){   }
 };
-   
+ 
+//*********************************
 class Apple: public Fruit{
 public:
    int size;
@@ -26,6 +29,7 @@ public:
    virtual void process(){   }
 };
 
+//*********************************
 int main(int argc, char *argv[])
 {
     cout << "Press the enter key to continue ...";
@@ -33,12 +37,12 @@ int main(int argc, char *argv[])
     cout <<sizeof(Fruit)<<endl;
     cout <<sizeof(Apple)<<endl;
     
-    Fruit fr1; //创建三个对象 
+    Fruit fr1; //鍒涘缓涓変釜瀵硅薄 
     Fruit fr2;
     Apple ap1;  
     cout <<"*****************************************"<<endl;
-    int* pf1 = (int*)&fr1;//让pf1指针指向这个对象 
-    int* pf2 = (int*)&fr2; //让pf2指针指向这个对象
+    int* pf1 = (int*)&fr1;//璁﹑f1鎸囬拡鎸囧悜杩欎釜瀵硅薄 
+    int* pf2 = (int*)&fr2; //璁﹑f2鎸囬拡鎸囧悜杩欎釜瀵硅薄
     
     cout << *pf1 << endl << *(pf1+1) << endl;
     cout <<"\n"<<endl;
